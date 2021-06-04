@@ -126,9 +126,12 @@ function draw() {
 }
 
 function keyPressed(){
-    if(keyDown(RIGHT_ARROW)){
-      ball.body.position.x += 5;
-    }else if(keyDown(LEFT_ARROW)){
-      ball.body.position.x -= 5;
+    if(keyCode === 39){
+      ball.body.position.x += 10;
+      console.log(ball.body.position.x);
+    }else if(keyCode === 37){
+      ball.body.position.x -= 10;
+    }else if(keyCode === 32){
+      ball.body.position.y -= 5;
     }
 }
